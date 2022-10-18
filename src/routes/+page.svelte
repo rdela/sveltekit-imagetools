@@ -2,7 +2,7 @@
 	import Image from '$lib/Image.svelte';
 </script>
 
-<h1>SvelteKit imagetools demo</h1>
+<h1>SvelteKit Imagetools demo</h1>
 
 <figure>
 	<Image
