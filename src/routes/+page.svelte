@@ -5,7 +5,7 @@
 	import carinaNircam from '$lib/main_image_star-forming_region_carina_nircam_final-5mb.jpg?w=2048&invert';
 </script>
 
-<h1>SvelteKit Imagetools demo</h1>
+<h1>SvelteKit Imagetools example</h1>
 
 <figure>
 	<Image
