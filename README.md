@@ -1,16 +1,21 @@
-# SvelteKit + Imagetools demo
+# SvelteKit + Imagetools example
 
 This repo shows a basic configuration for [SvelteKit](https://kit.svelte.dev/) with [Imagetools](https://github.com/JonasKruckenberg/imagetools) set up for image processing with [sharp](https://sharp.pixelplumbing.com).
 
-First we set up Imagetools and our [defaultDirectives](https://github.com/JonasKruckenberg/imagetools/blob/main/packages/vite/README.md#defaultdirectives) in [vite.config.js](./vite.config.js). We are generating AVIF and WEBP [file formats](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#format), using the [`picture` element](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#picture), and capping all [widths](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#width) at 2048px:
+First we set up Imagetools and our [defaultDirectives](https://github.com/JonasKruckenberg/imagetools/blob/main/packages/vite/README.md#defaultdirectives) in [vite.config.js](./vite.config.js). We are generating AVIF and WEBP [file formats](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#format) and using the [`picture` element](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#picture):
 
 ```
     format: 'avif;webp;' + extension,
-    picture: true,
-    width: 2048
+    picture: true
 ```
 
-Next we configure our [preprocess](https://kit.svelte.dev/docs/additional-resources#integrations) option in [svelte.config.js](./svelte.config.js). From there we import and use our [Image component](./src/lib/Image.svelte) in [+page.svelte](./src/routes/+page.svelte).
+Next we configure our [preprocess](https://kit.svelte.dev/docs/additional-resources#integrations) option in [svelte.config.js](./svelte.config.js). From there we import and use our [Image component](./src/lib/Image.svelte) in [+page.svelte](./src/routes/+page.svelte). To augment the global setup we did in [vite.config.js](./vite.config.js), in our [`img src` attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) we specify directives that are unique to particular images in the URL as query parameters:
+
+```
+    main_image_star-forming_region_carina_nircam_final-5mb.jpg?w=2048&invert
+```
+
+The `?` starts the query parameter expression, and we can use as many key-value pairs as we need, separated by `&`. When we [import static assets like images](https://vitejs.dev/guide/assets.html#importing-asset-as-url), Vite provides us with a hashed URL that can be cached forever so visitors [only have to download it once](https://youtu.be/Znd11rVHQOE?t=14516). Though we are importing it up top in the script tag, our sharp/Imagetools transformations would work fine if we specified the directives directly in the `src` attribute. We cap the [width](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#width) at 2048px with `w=2048`, shorthand for `width=2048`, and [invert](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#invert) the colors with `invert`, short for `invert=true`.
 
 [Ben McCann](https://github.com/benmccann) writes on GitHub:
 

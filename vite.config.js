@@ -14,8 +14,7 @@ const config = {
 				if (supportedExtensions.includes(extension)) {
 					return new URLSearchParams({
 						format: 'avif;webp;' + extension,
-						picture: true,
-						width: 2048
+						picture: true
 					});
 				}
 				return new URLSearchParams();

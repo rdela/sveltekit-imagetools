@@ -1,12 +1,15 @@
 <script>
 	import Image from '$lib/Image.svelte';
+	// when we import static assets like images, Vite provides us with a hashed
+	// URL that can be cached forever so uses only have to download it once
+	import carinaNircam from '$lib/main_image_star-forming_region_carina_nircam_final-5mb.jpg?w=2048&invert';
 </script>
 
 <h1>SvelteKit Imagetools demo</h1>
 
 <figure>
 	<Image
-		src="./_images/main_image_star-forming_region_carina_nircam_final-5mb.jpg"
+		src={carinaNircam}
 		alt="an undulating, translucent star-forming region in the Carina Nebula is shown in this Webb image, hued in ambers and blues; foreground stars with diffraction spikes can be seen, as can a speckling of background points of light through the cloudy nebula"
 	/>
 	<figcaption>
