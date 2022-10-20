@@ -19,10 +19,7 @@
 	<meta name="twitter:creator" content="@rickydelaveaga" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta
-		name="twitter:image"
-		content="{$page.url.origin}{carinaNircam.fallback.src}"
-	/>
+	<meta name="twitter:image" content={carinaNircam.fallback.src} />
 	<meta name="twitter:image:alt" content={carinaNircamAlt} />
 </svelte:head>
 
