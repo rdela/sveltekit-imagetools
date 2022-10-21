@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sveltejs/adapter-netlify': next
+  '@sveltejs/adapter-netlify': 1.0.0-next.78
   '@sveltejs/kit': next
   svelte: ^3.44.0
   svelte-check: ^2.7.1
@@ -12,7 +12,7 @@ specifiers:
   vite-imagetools: ^4.0.11
 
 devDependencies:
-  '@sveltejs/adapter-netlify': 1.0.0-next.81
+  '@sveltejs/adapter-netlify': 1.0.0-next.78
   '@sveltejs/kit': 1.0.0-next.520_svelte@3.52.0+vite@3.1.8
   svelte: 3.52.0
   svelte-check: 2.9.2_svelte@3.52.0
@@ -109,8 +109,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-netlify/1.0.0-next.81:
-    resolution: {integrity: sha512-jWZHw2uqUMJk8lFPzRm0xxmBZoDc430tbeCU9EtYhG+ypze2B6pJAlNTtcN3/J7wapHq19TgEK5oNt4LqORfNg==}
+  /@sveltejs/adapter-netlify/1.0.0-next.78:
+    resolution: {integrity: sha512-Yyn/j/0QcLK3Db442ducLUZmyvkO74j7Gdcwu9xN0fQN3kBlCJP9Itx5o4SySrPFGc4Q8cLJ5ELNg+mWduLBAA==}
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.15.11
