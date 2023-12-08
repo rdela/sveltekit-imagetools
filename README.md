@@ -1,4 +1,6 @@
-# SvelteKit + Imagetools example
+# RETIRED see [@sveltejs/enhanced-img](https://kit.svelte.dev/docs/images#sveltejs-enhanced-img) per [Ben McCann](https://github.com/sveltejs/kit/issues/241#issuecomment-1834682440)
+
+## SvelteKit + Imagetools example
 
 This repo shows a basic configuration for [SvelteKit](https://kit.svelte.dev/) with [Imagetools](https://github.com/JonasKruckenberg/imagetools) set up for image processing with [sharp](https://sharp.pixelplumbing.com).
 
